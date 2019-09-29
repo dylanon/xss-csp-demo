@@ -2,6 +2,8 @@
 
 ## Setup
 
+Make sure you're using Node.js 10.x or greater.
+
 Open a terminal and navigate to the project's root directory.
 
 1. `yarn install`
