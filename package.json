@@ -1,0 +1,20 @@
+{
+  "name": "xss-demo",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "https://github.com/dylanon/xss-demo",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.2",
+    "serve": "^11.2.0",
+    "socket.io": "^2.3.0"
+  },
+  "scripts": {
+    "start:client": "serve -l 4000",
+    "start:server": "nodemon server.js",
+    "start:evil": "nodemon evilServer.js"
+  }
+}
